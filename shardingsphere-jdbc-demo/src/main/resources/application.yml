@@ -1,0 +1,13 @@
+server:
+  port: 8081
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+spring:
+  application:
+    name: demo
+  datasource:
+    url: jdbc:shardingsphere:classpath:sharding/sharding-config.yaml
+    driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
