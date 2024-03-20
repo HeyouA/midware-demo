@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.alibaba.fastjson.JSONObject;
+import com.example.demo.entity.User;
 import com.example.demo.mapper.UserMapper;
 import com.example.demo.service.TestServiceImpl;
 import org.junit.jupiter.api.Test;
@@ -20,6 +21,14 @@ class DemoApplicationTests {
 	void selectById() {
 		userMapper.selectById(1);
 		userMapper.selectById(2);
+	}
+
+	@Test
+	void update() {
+		User u = new User();
+		u.setId(1);
+		u.setName("123");
+		userMapper.updateById(u);
 	}
 
 	@Test
